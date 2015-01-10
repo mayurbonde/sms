@@ -12,7 +12,6 @@ public class HelloWorldController {
 	public String hello(@RequestParam(value = "name", required = false, defaultValue = "World") String name,
 			Model model) {
 		model.addAttribute("name",name);
-		System.out.println("i am called");
 		return "views/helloworld";
 	}
 
