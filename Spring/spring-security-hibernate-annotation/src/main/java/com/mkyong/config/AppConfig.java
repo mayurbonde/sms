@@ -37,6 +37,8 @@ public class AppConfig {
         prop.put("hibernate.format_sql", "true");
         prop.put("hibernate.show_sql", "true");
         prop.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
+        prop.put("hibernate.hbm2ddl.auto", "create");
+        prop.put("show_sql", "true");
         return prop;
     }
 	
@@ -45,7 +47,7 @@ public class AppConfig {
 		
 		BasicDataSource ds = new BasicDataSource();
 	    ds.setDriverClassName("com.mysql.jdbc.Driver");
-		ds.setUrl("jdbc:mysql://localhost:3306/test");
+		ds.setUrl("jdbc:mysql://localhost:3306/user");
 		ds.setUsername("root");
 		ds.setPassword("root");
 		return ds;
